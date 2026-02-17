@@ -23,7 +23,7 @@ const App: React.FC = () => {
   const closeModal = () => setIsModalOpen(false);
 
   return (
-    <div className="min-h-screen bg-white text-gray-900 scroll-smooth">
+    <div className="min-h-screen bg-[#1f1f1d] text-white scroll-smooth">
       <Navigation scrolled={scrolled} onRegisterClick={openModal} />
       
       <main>
