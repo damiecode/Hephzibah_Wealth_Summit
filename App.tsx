@@ -1,11 +1,12 @@
 
 import React, { useState, useEffect } from 'react';
-import { Hero } from './components/Hero';
-import { About } from './components/About';
-import { Speakers } from './components/Speakers';
-import { Footer } from './components/Footer';
-import { RegistrationModal } from './components/RegistrationModal';
-import { Navigation } from './components/Navigation';
+import { Hero } from './components/Hero.tsx';
+import { About } from './components/About.tsx';
+import { WhatYouGain } from './components/WhatYouGain.tsx';
+import { Speakers } from './components/Speakers.tsx';
+import { Footer } from './components/Footer.tsx';
+import { RegistrationModal } from './components/RegistrationModal.tsx';
+import { Navigation } from './components/Navigation.tsx';
 
 const App: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -29,6 +30,7 @@ const App: React.FC = () => {
       <main>
         <Hero onRegisterClick={openModal} />
         <About />
+        <WhatYouGain />
         <Speakers />
       </main>
 

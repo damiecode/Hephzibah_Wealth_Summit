@@ -2,7 +2,7 @@
 import { Speaker } from './types';
 
 export const SUMMIT_DATE = "28th March 2026";
-export const SUMMIT_TIME = "9:00 AM";
+export const SUMMIT_TIME = "9:00 AM (WAT)";
 export const VENUE = "Virtual (Online Access)";
 export const THEME = "Identity. Clarity. Influence. God’s Way.";
 export const TAGLINE = "Hephzibah | God, Identity & Wealth Community";
