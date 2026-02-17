@@ -23,18 +23,12 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({ isOpen, on
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Tracking simulation: This is where you'd link to Google Sheets, Formspree, etc.
-    console.log("Tracking data for registration:", formData);
+    // Tracking simulation
+    console.log("Registered Participant:", formData);
     
-    // Simulate API call to a backend or tracking service
     setTimeout(() => {
       setIsSubmitting(false);
       setIsSuccess(true);
-      setTimeout(() => {
-        setIsSuccess(false);
-        setFormData({ name: '', email: '', phone: '', occupation: '' });
-        onClose();
-      }, 4000);
     }, 1500);
   };
 
@@ -44,18 +38,15 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({ isOpen, on
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 overflow-y-auto">
-      {/* Backdrop */}
       <div 
-        className="absolute inset-0 bg-[#1f1f1d]/90 backdrop-blur-md transition-opacity duration-300"
+        className="absolute inset-0 bg-[#1f1f1d]/95 backdrop-blur-sm transition-opacity duration-300"
         onClick={onClose}
       ></div>
 
-      {/* Modal Content */}
       <div className={`relative bg-white w-full max-w-lg rounded-3xl shadow-2xl overflow-hidden transform transition-all duration-500 scale-100 ${
         isOpen ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'
       }`}>
         
-        {/* Close Button */}
         <button 
           onClick={onClose}
           className="absolute top-4 right-4 text-gray-400 hover:text-brand-gold transition-colors z-10"
@@ -69,7 +60,7 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({ isOpen, on
           <div className="p-8 sm:p-10">
             <div className="text-center mb-8">
               <h2 className="text-3xl font-serif font-bold text-deep-dark mb-2">Join the Community</h2>
-              <p className="text-gray-500 italic">Faith • Emotional Clarity • Wealth in Him</p>
+              <p className="text-gray-500 italic font-serif">Faith • Emotional Clarity • Wealth in Him</p>
             </div>
 
             <form onSubmit={handleSubmit} className="space-y-4">
@@ -82,7 +73,7 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({ isOpen, on
                   value={formData.name}
                   onChange={handleChange}
                   placeholder="Enter your name"
-                  className="w-full px-4 py-3 rounded-xl border border-gray-100 bg-gray-50 focus:bg-white focus:border-brand-gold focus:ring-2 focus:ring-brand-gold/10 outline-none transition-all"
+                  className="w-full px-4 py-3 rounded-xl border border-gray-100 bg-gray-50 focus:bg-white focus:border-brand-gold focus:ring-2 focus:ring-brand-gold/10 outline-none transition-all font-serif"
                 />
               </div>
 
@@ -95,7 +86,7 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({ isOpen, on
                   value={formData.email}
                   onChange={handleChange}
                   placeholder="name@email.com"
-                  className="w-full px-4 py-3 rounded-xl border border-gray-100 bg-gray-50 focus:bg-white focus:border-brand-gold focus:ring-2 focus:ring-brand-gold/10 outline-none transition-all"
+                  className="w-full px-4 py-3 rounded-xl border border-gray-100 bg-gray-50 focus:bg-white focus:border-brand-gold focus:ring-2 focus:ring-brand-gold/10 outline-none transition-all font-serif"
                 />
               </div>
 
@@ -108,7 +99,7 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({ isOpen, on
                   value={formData.phone}
                   onChange={handleChange}
                   placeholder="+234..."
-                  className="w-full px-4 py-3 rounded-xl border border-gray-100 bg-gray-50 focus:bg-white focus:border-brand-gold focus:ring-2 focus:ring-brand-gold/10 outline-none transition-all"
+                  className="w-full px-4 py-3 rounded-xl border border-gray-100 bg-gray-50 focus:bg-white focus:border-brand-gold focus:ring-2 focus:ring-brand-gold/10 outline-none transition-all font-serif"
                 />
               </div>
 
@@ -120,7 +111,7 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({ isOpen, on
                   value={formData.occupation}
                   onChange={handleChange}
                   placeholder="What do you do?"
-                  className="w-full px-4 py-3 rounded-xl border border-gray-100 bg-gray-50 focus:bg-white focus:border-brand-gold focus:ring-2 focus:ring-brand-gold/10 outline-none transition-all"
+                  className="w-full px-4 py-3 rounded-xl border border-gray-100 bg-gray-50 focus:bg-white focus:border-brand-gold focus:ring-2 focus:ring-brand-gold/10 outline-none transition-all font-serif"
                 />
               </div>
 
@@ -143,18 +134,36 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({ isOpen, on
             <p className="text-[10px] text-center text-gray-400 mt-6 uppercase tracking-[0.2em]">Hephzibah Community • 2026</p>
           </div>
         ) : (
-          <div className="p-12 text-center flex flex-col items-center justify-center min-h-[450px]">
-            <div className="w-24 h-24 bg-brand-gold/10 rounded-full flex items-center justify-center text-brand-gold mb-8 animate-bounce">
-              <svg className="w-14 h-14" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div className="p-10 text-center flex flex-col items-center justify-center min-h-[480px]">
+            <div className="w-20 h-20 bg-brand-gold/10 rounded-full flex items-center justify-center text-brand-gold mb-6 animate-bounce">
+              <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
             </div>
-            <h2 className="text-4xl font-serif font-bold text-deep-dark mb-4">You're In!</h2>
-            <p className="text-gray-600 text-lg leading-relaxed max-w-sm">
-              Thank you, <span className="font-bold text-brand-gold">{formData.name}</span>! <br />
-              Check your email or WhatsApp shortly for access details.
+            <h2 className="text-4xl font-serif font-bold text-deep-dark mb-4">Registration Successful!</h2>
+            <p className="text-gray-600 text-lg leading-relaxed max-w-sm mb-8 font-serif italic">
+              Thank you, <span className="font-bold text-brand-gold">{formData.name}</span>. Your seat is confirmed for the 2026 Summit.
             </p>
-            <p className="mt-12 text-xs text-gray-400 uppercase tracking-widest">A ministry for women of purpose</p>
+            
+            <div className="bg-brand-gold/5 p-6 rounded-2xl border border-brand-gold/20 w-full mb-6">
+              <p className="text-deep-dark font-bold mb-4 uppercase tracking-widest text-sm">Next Step:</p>
+              <a 
+                href="https://chat.whatsapp.com/example" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-block w-full py-4 px-6 bg-[#25D366] hover:bg-[#128C7E] text-white rounded-xl font-bold transition-all shadow-lg transform hover:-translate-y-1"
+              >
+                Join our Private Community
+              </a>
+              <p className="text-[10px] text-gray-400 mt-3 font-medium">Join 500+ other women of purpose on WhatsApp</p>
+            </div>
+
+            <button 
+              onClick={onClose}
+              className="text-gray-400 text-xs hover:text-brand-gold underline tracking-widest"
+            >
+              Back to Home
+            </button>
           </div>
         )}
       </div>

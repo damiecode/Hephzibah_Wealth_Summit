@@ -13,31 +13,31 @@ export const Footer: React.FC<FooterProps> = ({ onRegisterClick }) => {
         <div className="grid md:grid-cols-3 gap-16 border-b border-white/5 pb-16">
           <div className="space-y-8">
             <div className="flex items-center gap-4">
-              <div className="p-2 bg-white/5 rounded-lg border border-white/10">
+              <div className="p-2 border border-white/10 rounded-lg">
                 <img 
-                  src="https://i.imgur.com/rM7sX9i.png" 
+                  src="https://lh3.googleusercontent.com/d/1gEvyf7EEmiwuASuINbRrXRszxYpkd078" 
                   alt="Hephzibah Logo" 
-                  className="h-10 object-contain"
+                  className="h-10 object-contain brightness-0 invert"
                 />
               </div>
               <span className="font-serif font-bold text-2xl tracking-tight">Hephzibah</span>
             </div>
-            <p className="text-gray-400 leading-relaxed text-sm">
+            <p className="text-gray-400 leading-relaxed text-sm font-serif italic">
               {MISSION}
             </p>
             <div className="pt-4">
                <p className="text-xs font-bold uppercase tracking-[0.3em] text-brand-gold mb-2">Our Tagline</p>
-               <p className="text-gray-300 italic text-sm">"{TAGLINE}"</p>
+               <p className="text-gray-300 italic text-sm font-serif">"{TAGLINE}"</p>
             </div>
           </div>
 
           <div className="space-y-8">
             <h4 className="text-brand-gold font-bold uppercase tracking-[0.2em] text-xs">Resources</h4>
             <ul className="space-y-5 text-gray-400 text-sm">
-              <li><a href="#about" className="hover:text-brand-gold transition-colors flex items-center gap-2">About the Community</a></li>
-              <li><a href="#speakers" className="hover:text-brand-gold transition-colors flex items-center gap-2">Meet the Speakers</a></li>
-              <li><button onClick={onRegisterClick} className="hover:text-brand-gold transition-colors text-left">Event Registration</button></li>
-              <li><a href="#" className="hover:text-brand-gold transition-colors">Privacy & Stewardship</a></li>
+              <li><a href="#about" className="hover:text-brand-gold transition-colors font-serif">About the Community</a></li>
+              <li><a href="#speakers" className="hover:text-brand-gold transition-colors font-serif">Meet the Speakers</a></li>
+              <li><button onClick={onRegisterClick} className="hover:text-brand-gold transition-colors text-left font-serif">Event Registration</button></li>
+              <li><a href="#" className="hover:text-brand-gold transition-colors font-serif">Privacy & Stewardship</a></li>
             </ul>
           </div>
 
@@ -56,7 +56,7 @@ export const Footer: React.FC<FooterProps> = ({ onRegisterClick }) => {
                 </a>
               ))}
             </div>
-            <p className="text-gray-400 text-sm">
+            <p className="text-gray-400 text-sm font-serif">
               Contact us: <br />
               <a href="mailto:info@hephzibahcommunity.org" className="text-white hover:text-brand-gold transition-colors underline decoration-brand-gold underline-offset-4">info@hephzibahcommunity.org</a>
             </p>
@@ -67,7 +67,7 @@ export const Footer: React.FC<FooterProps> = ({ onRegisterClick }) => {
           <p className="text-gray-500 text-xs tracking-widest uppercase">
             © 2026 Hephzibah | Faith • Clarity • Wealth
           </p>
-          <div className="flex items-center gap-4 text-xs font-serif italic text-brand-gold">
+          <div className="flex items-center gap-4 text-xs font-serif italic text-brand-gold uppercase tracking-[0.2em]">
             <span>Identity. Clarity. Influence. God’s Way.</span>
           </div>
         </div>
